@@ -12,5 +12,5 @@ jobs:
         with:
           buildozer_version: stable
           python_version: 3.11
-          # Perintah ini akan membuat file spec otomatis dan langsung merakit APK
+          # Perintah ini akan membuat file resep otomatis sebelum merakit APK
           command: buildozer init && sed -i 's/package.name = myapp/package.name = seandfamusic/g' buildozer.spec && buildozer -v android debug
