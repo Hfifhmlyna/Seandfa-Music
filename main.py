@@ -16,7 +16,7 @@ class SeandfaMobile(MDApp):
         ))
         
         screen.add_widget(MDRaisedButton(
-            text="PUTAR MUSIK (TEST)",
+            text="COBA PUTAR MUSIK",
             pos_hint={"center_x": 0.5, "center_y": 0.5}
         ))
         return screen
