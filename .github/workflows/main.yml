@@ -1,12 +1,16 @@
-name: Build APK
-on: [push, pull_request]
+name: Build Android APK
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         with:
           buildozer_version: stable
           python_version: 3.11
+          # Perintah sakti untuk inisialisasi otomatis dan build
+          command: buildozer init && sed -i 's/package.name = myapp/package.name = seandfamusic/g' buildozer.spec && buildozer -v android debug
